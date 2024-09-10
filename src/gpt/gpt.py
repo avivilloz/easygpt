@@ -1,4 +1,3 @@
-import os
 import logging
 import g4f
 from time import sleep
