@@ -1,14 +1,16 @@
 from setuptools import setup, find_packages
 
-with open("requirements.txt") as f:
-    requirements = f.read().splitlines()
-
 setup(
     name="gpt",
     version="0.1.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    install_requires=requirements,
+    install_requires=[
+        "pip",
+        "retry",
+        "g4f",
+        "curl_cffi",
+    ],
     author="Aviv Illoz",
     author_email="avivilloz@gmail.com",
     description=(

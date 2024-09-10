@@ -1,14 +1,9 @@
-import g4f
-import logging
+from .setup import logging
 from time import sleep
-from ..utils import create_dir
 from retry import retry
-from g4f.Provider import (
-    DDG,
-    Pizzagpt,
-    ChatgptFree,
-    Free2GPT,
-)
+
+import g4f
+from g4f.Provider import DDG, Pizzagpt, ChatgptFree, Free2GPT
 
 providers = [
     (DDG, "gpt-4o-mini"),
@@ -18,19 +13,8 @@ providers = [
 ]
 
 DELAY = 3
-LOGS_DIR = "logs"
-LOG_FILE = f"{LOGS_DIR}/gpt.log"
-
-create_dir(LOGS_DIR)
-
-logging.basicConfig(
-    filename=LOG_FILE,
-    filemode="w",
-    level=logging.DEBUG,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-)
-
 LOG = logging.getLogger(__name__)
+g4f.debug.logging = False
 
 
 def get_provider(should_cycle: bool = False):
@@ -60,3 +44,8 @@ def prompt_gpt(prompt: str) -> str:
             LOG.error(f"Error when trying to prompt {provider} | {model}: {e}")
             attempts += 1
     raise Exception("Failed to access gpt providers")
+
+
+if __name__ == "__main__":
+    prompt = "hey, how are you?"
+    prompt_gpt(prompt=prompt)
