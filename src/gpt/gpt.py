@@ -1,7 +1,7 @@
 import g4f
 import logging
 from time import sleep
-from utils import create_dir
+from ..utils import create_dir
 from retry import retry
 from g4f.Provider import (
     DDG,
