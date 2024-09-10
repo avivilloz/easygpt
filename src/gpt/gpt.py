@@ -1,9 +1,12 @@
-import logging
-import g4f
 from time import sleep
 from retry import retry
+from .setup import logging
+
+import g4f
 from g4f.Provider import DDG, Pizzagpt, ChatgptFree, Free2GPT
 
+
+print("hello from gpt")
 
 providers = [
     (DDG, "gpt-4o-mini"),
