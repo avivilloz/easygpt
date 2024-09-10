@@ -15,3 +15,33 @@ This package provides a flexible and resilient interface for interacting with va
 - Customizable Provider List: Allows easy addition or removal of providers to suit specific needs or adapt to changes in provider availability.
 
 This package is ideal for developers and researchers who need a reliable way to interact with GPT models, especially in scenarios where a single provider might not always be available or sufficient. It's particularly useful for applications that require high uptime and consistent access to AI-powered text generation capabilities.
+
+## How to install:
+
+Run the following command in your python venv:
+
+```
+pip install git+https://github.com/avivilloz/gpt.git@main#egg=gpt
+```
+
+Or add the following line to your project's `requirement.txt` file:
+
+```
+git+https://github.com/avivilloz/gpt.git@main#egg=gpt
+```
+
+And run the following command:
+
+```
+pip install -r requirements.txt
+```
+
+## How to use:
+
+```
+from gpt import prompt_gpt
+
+prompt = "hello, how are you?
+response = prompt_gpt(prompt=prompt)
+print(response)
+```
