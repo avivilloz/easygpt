@@ -1,9 +1,9 @@
-from .setup import logging, create_dir
+import logging
+import g4f
 from time import sleep
 from retry import retry
-
-import g4f
 from g4f.Provider import DDG, Pizzagpt, ChatgptFree, Free2GPT
+
 
 providers = [
     (DDG, "gpt-4o-mini"),
@@ -14,7 +14,6 @@ providers = [
 
 DELAY = 3
 LOG = logging.getLogger(__name__)
-g4f.debug.logging = False
 
 
 def get_provider(should_cycle: bool = False):
