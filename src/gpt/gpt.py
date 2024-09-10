@@ -25,19 +25,7 @@ def get_provider(should_cycle: bool = False):
 
 
 @retry(exceptions=Exception, tries=3)
-def prompt_gpt(prompt: str, logs_dir: str) -> str:
-
-    LOG_FILE = f"{logs_dir}/gpt.log"
-
-    create_dir(logs_dir)
-
-    logging.basicConfig(
-        filename=LOG_FILE,
-        filemode="a",
-        level=logging.DEBUG,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    )
-
+def prompt_gpt(prompt: str) -> str:
     sleep(DELAY)
     LOG.info(f"Prompt: {prompt}")
     attempts = 0
