@@ -20,7 +20,7 @@ This package is ideal for developers and researchers who need a reliable way to 
 
 Run the following command in your python venv:
 
-```
+```sh
 pip install git+https://github.com/avivilloz/easygpt.git@main#egg=easygpt
 ```
 
@@ -32,13 +32,13 @@ git+https://github.com/avivilloz/easygpt.git@main#egg=easygpt
 
 And run the following command:
 
-```
+```sh
 pip install -r requirements.txt
 ```
 
 ## How to use:
 
-```
+```python
 from easygpt import prompt_gpt
 
 prompt = "hello, how are you?
