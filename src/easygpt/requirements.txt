@@ -1,4 +1,3 @@
-pip
 retry
 g4f
 curl_cffi

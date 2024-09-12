@@ -1,4 +1,4 @@
-# GPT
+# Easy GPT
 
 A robust GPT interface with multiple providers, automatic cycling, and error handling for reliable AI-powered text generation.
 
@@ -21,13 +21,13 @@ This package is ideal for developers and researchers who need a reliable way to 
 Run the following command in your python venv:
 
 ```
-pip install git+https://github.com/avivilloz/gpt.git@main#egg=gpt
+pip install git+https://github.com/avivilloz/easygpt.git@main#egg=easygpt
 ```
 
 Or add the following line to your project's `requirement.txt` file:
 
 ```
-git+https://github.com/avivilloz/gpt.git@main#egg=gpt
+git+https://github.com/avivilloz/easygpt.git@main#egg=easygpt
 ```
 
 And run the following command:
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ## How to use:
 
 ```
-from gpt import prompt_gpt
+from easygpt import prompt_gpt
 
 prompt = "hello, how are you?
 response = prompt_gpt(prompt=prompt)
