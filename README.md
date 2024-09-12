@@ -1,4 +1,4 @@
-# Easy GPT
+# GPT4Free Wrapper
 
 A robust GPT interface with multiple providers, automatic cycling, and error handling for reliable AI-powered text generation.
 
@@ -21,13 +21,13 @@ This package is ideal for developers and researchers who need a reliable way to 
 Run the following command in your python venv:
 
 ```sh
-pip install git+https://github.com/avivilloz/easygpt.git@main#egg=easygpt
+pip install git+https://github.com/avivilloz/g4f_wrapper.git@main#egg=g4f_wrapper
 ```
 
 Or add the following line to your project's `requirement.txt` file:
 
 ```
-git+https://github.com/avivilloz/easygpt.git@main#egg=easygpt
+git+https://github.com/avivilloz/g4f_wrapper.git@main#egg=g4f_wrapper
 ```
 
 And run the following command:
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ## How to use:
 
 ```python
-from easygpt import prompt_gpt
+from g4f_wrapper import prompt_gpt
 
 prompt = "hello, how are you?
 response = prompt_gpt(prompt=prompt)
