@@ -43,8 +43,3 @@ def prompt_gpt(prompt: str) -> str:
             LOG.error(f"Error when trying to prompt {provider} | {model}: {e}")
             attempts += 1
     raise Exception("Failed to access gpt providers")
-
-
-if __name__ == "__main__":
-    prompt = "hey, how are you?"
-    prompt_gpt(prompt=prompt)
