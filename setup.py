@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="g4f_wrapper",
+    name="gpt_utils",
     version="0.1.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
@@ -18,7 +18,7 @@ setup(
     ),
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/avivilloz/g4f_wrapper",
+    url="https://github.com/avivilloz/gpt_utils",
     python_requires=">=3.6",
     classifiers=[
         "Programming Language :: Python :: 3",

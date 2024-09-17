@@ -1,4 +1,4 @@
-# GPT4Free Wrapper
+# GPT Utils
 
 A robust GPT interface with multiple providers, automatic cycling, and error handling for reliable AI-powered text generation.
 
@@ -21,13 +21,13 @@ This package is ideal for developers and researchers who need a reliable way to 
 Run the following command in your python venv:
 
 ```sh
-pip install git+https://github.com/avivilloz/g4f_wrapper.git@main#egg=g4f_wrapper
+pip install git+https://github.com/avivilloz/gpt_utils.git@main#egg=gpt_utils
 ```
 
 Or add the following line to your project's `requirement.txt` file:
 
 ```
-git+https://github.com/avivilloz/g4f_wrapper.git@main#egg=g4f_wrapper
+git+https://github.com/avivilloz/gpt_utils.git@main#egg=gpt_utils
 ```
 
 And run the following command:
@@ -39,9 +39,10 @@ pip install -r requirements.txt
 ## How to use:
 
 ```python
-from g4f_wrapper import prompt_gpt
+from gpt_utils import GPT4Free
 
+gpt = GPT4Free()
 prompt = "hello, how are you?
-response = prompt_gpt(prompt=prompt)
+response = gpt.prompt_gpt(prompt=prompt)
 print(response)
 ```
